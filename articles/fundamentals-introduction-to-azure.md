@@ -24,18 +24,19 @@ O Microsoft Azure é a plataforma de aplicativos da Microsoft para a nuvem públ
 
 O Azure está aumentando o tempo todo, portanto, é fácil ficar sobrecarregado. Os serviços básicos são listados anteriormente no documento. Comece por eles e, então, passe para os serviços adicionais. Isso não significa que você não pode utilizar os serviços adicionais por conta própria, mas os serviços básicos compõem o núcleo de um aplicativo sendo executado pelo Azure.
 
-**Fornecer feedback**
+**Forneça feedback**
 
 Seu feedback é importante. Este artigo deve oferecer a você uma visão geral eficaz do Azure. Se isso não acontecer, mencione para nós na seção de comentários da parte inferior da página. Ofereça alguns detalhes sobre o que você esperava ver e como melhorar este artigo.
    
 
 ## Os componentes do Azure
 
-O Azure agrupa serviços em categorias no Portal de Gerenciamento e em vários recursos visuais, como [O que é o infográfico do Azure](http://azure.microsoft.com/documentation/infographics/azure/). O Portal de Gerenciamento é o que você utiliza para gerenciar a maior parte (mas não todos) os serviços no Azure.
+O Azure agrupa serviços em categorias no Portal de Gerenciamento e em vários recursos visuais, como [O que é o infográfico do Azure](http://azure.microsoft.com/documentation/infographics/azure/). O Portal de Gerenciamento é o que você utiliza para gerenciar a maior parte (mas não todos) dos serviços no Azure.
 
 Este documento utilizará uma **organização diferente** para tratar de serviços baseados em uma função similar e para chamar sub-serviços que são parte de serviços maiores.
 
-![Componentes do Azure](./media/fundamentals-introduction-to-azure/AzureComponentsIntroNew780.png) *Figura: o Azure fornece serviços de aplicativos acessíveis pela Internet, sendo executados em datacenters do Azure.*
+![Componentes do Azure](./media/fundamentals-introduction-to-azure/AzureComponentsIntroNew780.png)   
+ *Figura: o Azure fornece serviços de aplicativos acessíveis pela Internet, sendo executados em datacenters do Azure.*
 
 ## Portal de Gerenciamento
 O Azure conta com uma interface web chamada [Portal de Gerenciamento](http://manage.windowsazure.com), que permite que os administradores acessem e administrem a maioria dos recursos do Azure (mas não todos). A Microsoft normalmente libera o novo portal de interface de usuário em versão beta, antes de descontinuar o antigo. A versão nova é chamada de ["Portal de Visualização do Azure"](https://portal.azure.com/).
@@ -53,13 +54,14 @@ Essas tecnologias podem ser usadas separadamente ou combinadas, conforme a neces
 
 ### Máquinas Virtuais do Azure
 
-![Máquinas Virtuais do Azure ROBBCSIART\_TEST](./media/fundamentals-introduction-to-azure/mscsiart_VirtualMachinesIntroNew_12345.png) *Figura: máquinas virtuais do Azure oferecem controle total de instâncias de máquina virtual na nuvem.*
+![Máquinas Virtuais do Azure ROBBCSIART\_TEST](./media/fundamentals-introduction-to-azure/mscsiart_VirtualMachinesIntroNew_12345.png)   
+ *Figura: máquinas virtuais do Azure oferecem controle total de instâncias de máquina virtual na nuvem.*
 
-A capacidade de criar uma máquina virtual sob demanda, seja de uma imagem padrão ou de uma fornecida por você, pode ser bastante útil. Essa abordagem, geralmente conhecida como Infraestrutura como Serviço (IaaS), é fornecida pelas Máquinas Virtuais do Azure. A figura 2 mostra uma combinação de como uma Máquina Virtual (VM) é executada e criada a partir de um VHD.
+A capacidade de criar uma máquina virtual sob demanda, seja a partir de uma imagem padrão ou de uma fornecida por você, pode ser bastante útil. Essa abordagem, geralmente conhecida como Infraestrutura como Serviço (IaaS), é fornecida pelas Máquinas Virtuais do Azure. A figura 2 mostra uma combinação de como uma Máquina Virtual (VM) é executada e criada a partir de um VHD.
 
-Para criar uma VM, você especifica qual VHD usar e o tamanho da VM. Você então paga por cada momento em que a VM estiver em execução. Você paga por minuto e somente enquanto estiver em funcionamento, apesar de existir uma cobrança mínima de armazenamento para manter o VHD disponível. O Azure oferece uma galeria de VHDs em estoque (chamados "imagens") que contêm um sistema operacional inicializável do qual se pode começar. Estas incluem opções da Microsoft e de parceiros, como o Windows Server e Linux, SQL Server, Oracle e muitos outros. Você fica livre para criar VHDs e imagens e então carregá-los, por conta própria. Você pode até mesmo carregar VHDs que contém somente dados e acessá-los a partir de suas VMs em execução.
+Para criar uma VM, você especifica qual VHD usar e o tamanho da VM. Você então paga por cada momento em que a VM estiver em execução. Você paga por minuto e somente enquanto ela estiver em funcionamento, apesar de existir uma cobrança mínima de armazenamento para manter o VHD disponível. O Azure oferece uma galeria de VHDs em estoque (chamados "imagens") que contêm um sistema operacional inicializável do qual se pode começar. Estas incluem opções da Microsoft e de parceiros, como o Windows Server e Linux, SQL Server, Oracle e muitos outros. Você fica livre para criar VHDs e imagens e então carregá-los, por conta própria. Você pode até mesmo carregar VHDs que contém somente dados e acessá-los a partir de suas VMs em execução.
 
-Seja qual for a origem do VHD, você pode armazenar persistentemente todas as alterações feitas enquanto uma VM estiver em execução. Na próxima vez que uma VM for criada desse VHD, tudo é obtido de onde você parou. Os VHDs que dão suporte às Máquinas Virtuais são armazenados nos blobs de armazenamento do Azure, sobre os quais falaremos depois. Isso significa que você obtém redundância para garantir que suas VMs não desaparecerão devido a falhas de hardware e de disco. Também é possível copiar o VHD alterado fora do Azure e executá-lo localmente.
+Seja qual for a origem do VHD, você pode armazenar persistentemente todas as alterações feitas enquanto uma VM estiver em execução. Na próxima vez que uma VM for criada desse VHD, as coisas recomeçam de onde você parou. Os VHDs que dão suporte às Máquinas Virtuais são armazenados nos blobs de armazenamento do Azure, sobre os quais falaremos depois. Isso significa que você obtém redundância para garantir que suas VMs não desaparecerão devido a falhas de hardware e de disco. Também é possível copiar o VHD alterado fora do Azure e executá-lo localmente.
  
 Seu aplicativo é executado dentro de uma ou mais Máquinas Virtuais, dependendo de como você o criou anteriormente ou de como decidir criá-lo, do zero, a partir de agora.
 
@@ -67,7 +69,7 @@ Essa abordagem geral para computação em nuvem pode ser usada para solucionar m
 
 **Cenários para máquina virtual**
 
-1.	**Dev/Test** - Você pode usá-las para criar uma plataforma barata de desenvolvimento e teste que pode ser desligada quando tiver terminado de usá-la. Também é possível criar e executar aplicativos que usem qualquer linguagem e biblioteca de sua preferência. Esses aplicativos podem usar qualquer uma das opções de gerenciamento de dados fornecidas pelo Azure e você pode optar por usar o SQL Server ou outro DBMS em uma ou mais máquinas virtuais. 
+1.	**Desenvolvimento/Teste** - Você pode usá-las para criar uma plataforma barata de desenvolvimento e teste que pode ser desligada quando tiver terminado de usá-la. Também é possível criar e executar aplicativos que usem qualquer linguagem e biblioteca de sua preferência. Esses aplicativos podem usar qualquer uma das opções de gerenciamento de dados fornecidas pelo Azure e você pode optar por usar o SQL Server ou outro DBMS em uma ou mais máquinas virtuais. 
 2.	**Mova os aplicativos para o Azure (arrastar e deslocar)** - “Arrastar e deslocar" refere-se a mover seu aplicativo, como você utilizaria uma empilhadeira para mover um objeto grande. Você “arrasta" o VHD a partir de seu datacenter local e “desloca-o" para o Azure, executando-o de lá. Você normalmente precisará fazer algum trabalho para remover dependências de outros sistemas. Se houver muitas você pode escolher, em vez dessa opção, a opção 3.  
 3.	**Estenda seu Datacenter** - Use as VMs do Azure como uma extensão do seu datacenter local, executando o SharePoint ou outros aplicativos. Para oferecer suporte a essa opção, é possível criar domínios do Windows na nuvem executando o Active Directory nas VMs do Azure. Você pode utilizar a rede virtual do Azure (mencionada posteriormente) para unir sua rede local à rede do Azure.
  
@@ -75,7 +77,8 @@ Essa abordagem geral para computação em nuvem pode ser usada para solucionar m
 
 ### Aplicativos Web
 
-![Aplicativos Web do Azure ROBBCSIART\_TEST](./media/fundamentals-introduction-to-azure/mscsiart_AzureWebsitesIntroNew_12345.png) *Figura: os Aplicativos Web do Azure executam um aplicativo de site na nuvem sem precisar gerenciar o servidor Web subjacente.*
+![Aplicativos Web do Azure ROBBCSIART\_TEST](./media/fundamentals-introduction-to-azure/mscsiart_AzureWebsitesIntroNew_12345.png)   
+ *Figura: os Aplicativos Web do Azure executam um aplicativo de site na nuvem sem precisar gerenciar o servidor Web subjacente.*
 
 Uma das tarefas mais comuns que as pessoas fazem em nuvem é executar sites e aplicativos web. As Máquinas Virtuais do Azure permitem isso, porém, ainda deixam você com a responsabilidade de administrar uma ou mais VMs e os sistemas operacionais subjacentes. As funções web dos serviços de nuvem podem fazer isso, mas implantá-las e mantê-las ainda exige trabalho administrativo. E se você apenas quisesse um site no qual alguma outra pessoa cuidasse do trabalho administrativo para você?
 
